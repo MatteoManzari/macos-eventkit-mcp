@@ -36,3 +36,7 @@ env/bin/pytest -v
 ```
 
 Optionally set `TEST_REMINDERS_LISTS` to a comma-separated list of additional reminder lists to test. Tests for an unset destination are skipped. The values stay in your local environment and are not committed.
+
+## License
+
+This project is available under the [MIT License](LICENSE).
