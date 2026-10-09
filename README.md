@@ -20,7 +20,10 @@ Run `env/bin/python calendar_mcp.py` for the Calendar server. Configure each as 
 
 ## Tools
 
-The Reminders server provides `list_reminders`, `list_reminder_lists`, `get_reminder`, `create_reminder`, `update_reminder`, `complete_reminder`, and `delete_reminder`. The Calendar server provides `list_events`, `list_calendars`, `get_event`, `create_event`, `update_event`, and `delete_event`. Calendar event creation and updates support one or more alerts through `alert_minutes_before`.
+- **Reminders:** `list_reminders`, `list_reminder_lists`, `get_reminder`, `create_reminder`, `update_reminder`, `complete_reminder`, and `delete_reminder`. Listing supports list selection, text search, result limits, and completed reminders. Creation and updates support notes, due date and time, priority, and list selection.
+- **Calendar:** `list_events`, `list_calendars`, `get_event`, `create_event`, `update_event`, and `delete_event`. Listing supports date ranges, calendar selection, text search, and result limits. Events support all-day scheduling, notes, location, and one or more alerts through `alert_minutes_before`.
+
+Each server accepts and returns its own prefixed EventKit identifiers (`x-apple-reminder://` or `x-apple-event://`). Tool errors are returned as JSON with `status: "failed"` and an `error` message.
 
 ## Integration tests
 
